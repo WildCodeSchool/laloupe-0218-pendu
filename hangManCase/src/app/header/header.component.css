@@ -1,7 +1,32 @@
-.logo-img {
-    background-image: url(file:///home/antoine/Pictures/Logo.jpeg);
+/*Header.css*/
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+/*.logo-img {
+    background-image: url(https://image.noelshack.com/fichiers/2018/13/2/1522139920-logo.jpeg);
     background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     width: 100%;
-    height: 30vh;
-    padding: 0%;
+    height: 35em;
+    padding: 0;
+}*/
+
+.title-header {
+    text-align: center;
+    text-shadow: 1px 2px grey;
+    font-family: 'Questrial', sans-serif;
+    margin-top: 30px;
 }
+
+h3 {
+    text-align: center;
+}
+span {
+    font-size: 1em;
+}
+/* fixed the button right top
+.button-rules {
+
+   position: fixed;
+   top: 0;
+   right: 0;
+}*/
