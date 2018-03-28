@@ -1,0 +1,9 @@
+.logo-img {
+    background-image: url(https://image.noelshack.com/fichiers/2018/13/2/1522139920-logo.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 100%;
+    height: 35em;
+    padding: 0;
+}
