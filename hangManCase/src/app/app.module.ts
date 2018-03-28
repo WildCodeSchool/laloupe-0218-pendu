@@ -9,10 +9,17 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
 import { LogoHeadComponent } from './logo-head/logo-head.component';
+import { LoginComponent } from './login/login.component';
+
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
+
 
 const appRoutes: Routes = [
   { path: 'button', component: ButtonComponent },
   { path: 'matchmaking', component: MatchmakingComponent },
+  { path: 'login', component: LoginComponent },
+
 ];
 
 @NgModule({
@@ -21,9 +28,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase, 'HangMan')
   ],
-  declarations: [AppComponent, HeaderComponent, LogoHeadComponent],
-  declarations: [AppComponent, ButtonComponent, MatchmakingComponent],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent, HeaderComponent, LogoHeadComponent, ButtonComponent, MatchmakingComponent, LoginComponent],
+  bootstrap: [AppComponent],
+  providers: [AngularFireAuth],
 })
 export class AppModule { }
 
