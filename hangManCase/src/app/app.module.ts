@@ -8,10 +8,17 @@ import { MatchmakingComponent } from './matchmaking/matchmaking.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { LogoHeadComponent } from './logo-head/logo-head.component';
+import { LoginComponent } from './login/login.component';
+
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
+
 
 const appRoutes: Routes = [
   { path: '/', component: ButtonComponent },
   { path: 'matchmaking', component: MatchmakingComponent },
+  { path: 'login', component: LoginComponent },
+
 ];
 
 @NgModule({
