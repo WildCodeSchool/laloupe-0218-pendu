@@ -15,7 +15,7 @@ import * as firebase from 'firebase/app';
 
 
 const appRoutes: Routes = [
-  { path: '/', component: ButtonComponent },
+  { path: '', component: ButtonComponent },
   { path: 'matchmaking', component: MatchmakingComponent },
   { path: 'login', component: LoginComponent },
 
@@ -27,8 +27,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase, 'HangMan')
   ],
-  declarations: [AppComponent, ButtonComponent, MatchmakingComponent, HeaderComponent, LogoHeadComponent],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent, ButtonComponent, MatchmakingComponent, HeaderComponent, LogoHeadComponent, LoginComponent],
+  bootstrap: [AppComponent],
+  providers: [AngularFireAuth]
 })
 export class AppModule { }
 
