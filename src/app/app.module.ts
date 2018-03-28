@@ -15,7 +15,7 @@ import * as firebase from 'firebase/app';
 
 
 const appRoutes: Routes = [
-  { path: '', component: ButtonComponent },
+  { path: 'button', component: ButtonComponent },
   { path: 'matchmaking', component: MatchmakingComponent },
   { path: 'login', component: LoginComponent },
 
