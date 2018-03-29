@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  headercomponent = "Entered in new component created";
+  headercomponent = 'Entered in new component created';
   constructor() { }
 
   ngOnInit() {
