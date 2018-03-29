@@ -11,6 +11,7 @@
     "lint:js": "ng lint",
     "lint:html": "htmllint src/**/*.html",
     "lint:autofix": "ng lint --fix && stylelint 'src/app/**/*{.css,.scss}' --fix",
+    "lh": "lighthouse-ci",
     "e2e": "ng e2e"
   },
   "private": true,
