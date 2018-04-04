@@ -1,0 +1,10 @@
+.mat-fab {
+  margin: 0px 3px;
+  font-size: larger;
+}
+
+.keyboard.center-items {
+  justify-content: center;
+  padding: 3px 0px;
+  display: flex;
+}

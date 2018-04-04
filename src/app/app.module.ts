@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
+import { KeyboardComponent } from './keyboard/keyboard.component';
 
 
 
@@ -30,7 +31,10 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(environment.firebase, 'HangMan')
   ],
-  declarations: [AppComponent, ButtonComponent, MatchmakingComponent, HeaderComponent, LogoHeadComponent, LoginComponent, HomeComponent],
+  declarations: [AppComponent, ButtonComponent,
+    MatchmakingComponent, HeaderComponent,
+    LogoHeadComponent, LoginComponent,
+    HomeComponent, KeyboardComponent],
   bootstrap: [AppComponent],
   providers: [AngularFireAuth]
 })
