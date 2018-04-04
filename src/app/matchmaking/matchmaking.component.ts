@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-matchmaking',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./matchmaking.component.css']
 })
 export class MatchmakingComponent implements OnInit {
+  items: Observable<any[]>;
 
-  constructor() { }
+  constructor(private db: AngularFirestore) {
+  }
 
   ngOnInit() {
+    this.items = this.db.collection('items').valueChanges();
   }
 
 }

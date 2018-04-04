@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { LogoHeadComponent } from './logo-head/logo-head.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
@@ -28,7 +29,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(appRoutes),
-    AngularFireModule.initializeApp(environment.firebase, 'HangMan')
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ],
   declarations: [AppComponent, ButtonComponent, MatchmakingComponent, HeaderComponent, LogoHeadComponent, LoginComponent, HomeComponent],
   bootstrap: [AppComponent],
