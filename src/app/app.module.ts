@@ -14,6 +14,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
+import { KeyboardComponent } from './keyboard/keyboard.component';
 
 
 
@@ -32,7 +33,10 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
   ],
-  declarations: [AppComponent, ButtonComponent, MatchmakingComponent, HeaderComponent, LogoHeadComponent, LoginComponent, HomeComponent],
+  declarations: [AppComponent, ButtonComponent,
+    MatchmakingComponent, HeaderComponent,
+    LogoHeadComponent, LoginComponent,
+    HomeComponent, KeyboardComponent],
   bootstrap: [AppComponent],
   providers: [AngularFireAuth]
 })
