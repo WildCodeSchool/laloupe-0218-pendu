@@ -7,3 +7,9 @@
         {{item.name}}
     </li>
 </ul>
+
+<ul>
+    <li class="text" *ngFor="let dictionary of Dictionary | async">
+        {{dictionary.word6}}
+    </li>
+</ul>

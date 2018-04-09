@@ -9,12 +9,14 @@ import { Observable } from 'rxjs/Observable';
 })
 export class MatchmakingComponent implements OnInit {
   items: Observable<any[]>;
+  Dictionary: Observable<any[]>;
 
   constructor(private db: AngularFirestore) {
   }
 
   ngOnInit() {
     this.items = this.db.collection('items').valueChanges();
+    this.Dictionary = this.db.collection('Dictionary').valueChanges();
   }
 
 }
