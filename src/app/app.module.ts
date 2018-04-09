@@ -15,15 +15,15 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { KeyboardComponent } from './keyboard/keyboard.component';
+import { HangmanComponent } from './hangman/hangman.component';
 
 
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'button', component: ButtonComponent },
   { path: 'matchmaking', component: MatchmakingComponent },
   { path: 'login', component: LoginComponent },
-
+  { path: 'home', component: HomeComponent },
+  { path: 'hangman', component: HangmanComponent }
 ];
 
 @NgModule({
@@ -36,7 +36,7 @@ const appRoutes: Routes = [
   declarations: [AppComponent, ButtonComponent,
     MatchmakingComponent, HeaderComponent,
     LogoHeadComponent, LoginComponent,
-    HomeComponent, KeyboardComponent],
+    HomeComponent, KeyboardComponent, HangmanComponent],
   bootstrap: [AppComponent],
   providers: [AngularFireAuth]
 })
