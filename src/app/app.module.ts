@@ -16,6 +16,7 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { KeyboardComponent } from './keyboard/keyboard.component';
 import { HangmanComponent } from './hangman/hangman.component';
+import { GameComponent } from './game/game.component';
 
 
 
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'matchmaking', component: MatchmakingComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'hangman', component: HangmanComponent }
+  { path: 'hangman', component: HangmanComponent },
+  { path: 'game', component: GameComponent },
 ];
 
 @NgModule({
@@ -36,7 +38,7 @@ const appRoutes: Routes = [
   declarations: [AppComponent, ButtonComponent,
     MatchmakingComponent, HeaderComponent,
     LogoHeadComponent, LoginComponent,
-    HomeComponent, KeyboardComponent, HangmanComponent],
+    HomeComponent, KeyboardComponent, HangmanComponent, GameComponent],
   bootstrap: [AppComponent],
   providers: [AngularFireAuth]
 })

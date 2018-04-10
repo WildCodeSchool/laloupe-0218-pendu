@@ -73,4 +73,8 @@ export class KeyboardComponent implements OnInit {
       .merge(this.virtualKeyObservable)
       .subscribe(consumer);
   }
+
+  getKeyObservable() {
+    return this.virtualKeyObservable;
+  }
 }
