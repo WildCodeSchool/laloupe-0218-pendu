@@ -98,15 +98,15 @@ angularfire2@5.0.0-rc.6
 MIT
 MIT
 
+@angular/common@5.2.9
+MIT
+MIT
+
 @angular/platform-browser@5.2.9
 MIT
 MIT
 
 @angular/router@5.2.9
-MIT
-MIT
-
-@angular/common@5.2.9
 MIT
 MIT
 
