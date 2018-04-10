@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
-import { ButtonComponent } from './button/button.component';
 import { MatchmakingComponent } from './matchmaking/matchmaking.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
@@ -35,7 +34,7 @@ const appRoutes: Routes = [
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
   ],
-  declarations: [AppComponent, ButtonComponent,
+  declarations: [AppComponent,
     MatchmakingComponent, HeaderComponent,
     LogoHeadComponent, LoginComponent,
     HomeComponent, KeyboardComponent, HangmanComponent, GameComponent],
