@@ -20,9 +20,9 @@ import { HangmanComponent } from './hangman/hangman.component';
 
 
 const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'matchmaking', component: MatchmakingComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
   { path: 'hangman', component: HangmanComponent }
 ];
 
