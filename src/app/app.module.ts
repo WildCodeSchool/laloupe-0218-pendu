@@ -21,6 +21,7 @@ import { GameComponent } from './game/game.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'matchmaking', component: MatchmakingComponent },
   { path: 'login', component: LoginComponent },
   { path: 'hangman', component: HangmanComponent },
