@@ -5,8 +5,17 @@
   <p>
     Score : {{ me.score }}
   </p>
+
   <div class="letter" *ngFor="let letter of me.playingWord">
-    {{letter}}
+    {{ letter }}
   </div>
+  <div>
+
+  </div>
+
 </div>
+
+<button (click)="getWords()">test</button>
+<button (click)="sendWord()">testz</button>
+
 <app-keyboard></app-keyboard>
