@@ -1,3 +1,4 @@
+import { GameComponent } from './../game/game.component';
 import { AuthService } from './../auth.service';
 import { Player } from './../model/player';
 import { Room } from './../model/room';
@@ -66,9 +67,9 @@ export class MatchmakingComponent implements OnInit, OnDestroy {
   }
 
   setupRoom(room, roomId) {
-    room.players[0].remainingTries = 13;
+    room.players[0].remainingTries = GameComponent.TRIES_MAX;
     room.players[0].score = 0;
-    room.players[1].remainingTries = 13;
+    room.players[1].remainingTries = GameComponent.TRIES_MAX;
     room.players[1].score = 0;
 
     this.afs.doc<Room>('rooms/' + roomId).set(JSON.parse(JSON.stringify(room))).then(() => {
