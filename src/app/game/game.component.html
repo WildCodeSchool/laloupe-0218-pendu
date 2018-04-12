@@ -1,17 +1,17 @@
-<div *ngIf="room">
-  <p>
-    Remaining tries : {{ me.remainingTries }}
-  </p>
-  <p>
-    Score : {{ me.score }}
-  </p>
+<div *ngIf="room && me">
+    <p>
+        Remaining tries : {{ me.remainingTries }}
+    </p>
+    <p>
+        Score : {{ me.score }}
+    </p>
 
-  <div class="letter" *ngFor="let letter of me.playingWord">
-    {{ letter }}
-  </div>
-  <div>
+    <div class="letter" *ngFor="let letter of me.playingWord">
+        {{ letter }}
+    </div>
+    <div>
 
-  </div>
+    </div>
 
 </div>
 

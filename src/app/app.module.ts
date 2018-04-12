@@ -26,7 +26,7 @@ const appRoutes: Routes = [
   { path: 'matchmaking', component: MatchmakingComponent },
   { path: 'login', component: LoginComponent },
   { path: 'hangman', component: HangmanComponent },
-  { path: 'game', component: GameComponent },
+  { path: 'game/:id', component: GameComponent },
 ];
 
 @NgModule({
