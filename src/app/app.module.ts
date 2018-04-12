@@ -1,3 +1,4 @@
+import { AuthService } from './auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
@@ -40,7 +41,7 @@ const appRoutes: Routes = [
     LogoHeadComponent, LoginComponent,
     HomeComponent, KeyboardComponent, HangmanComponent, GameComponent],
   bootstrap: [AppComponent],
-  providers: [AngularFireAuth]
+  providers: [AngularFireAuth, AuthService]
 })
 export class AppModule { }
 
