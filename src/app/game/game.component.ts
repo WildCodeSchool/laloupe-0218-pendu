@@ -1,3 +1,4 @@
+import { Player } from './../model/player';
 import { KeyboardComponent } from './../keyboard/keyboard.component';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Room } from './../model/room';
@@ -5,7 +6,6 @@ import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/take';
-import { Player } from '../model/player';
 import { Router } from '@angular/router';
 
 
@@ -35,7 +35,7 @@ export class GameComponent implements OnInit, AfterViewInit {
     });
   }
 
-  setWord() {
+  SetRdmWord() {
     this.room.word = this.dictionary.words[Math.floor(Math.random() * this.dictionary.words.length)].toUpperCase();
     this.room.players[0].playingWord = new Array(this.room.word.length);
     this.room.players[0].playingWord = new Array(this.room.word.length);
@@ -43,20 +43,6 @@ export class GameComponent implements OnInit, AfterViewInit {
     console.log(this.room.word);
 
   }
-
-  // sendWord() {
-  //   let ArrayTest = [];
-  //   let i = 0;
-  //   const wordtest = 'POLICE';
-  //   ArrayTest = wordtest.split('');
-  //   console.log(ArrayTest);
-  //   while (i < ArrayTest[i]) {
-  //     if (ArrayTest[i] === wordtest) {
-  //       this.me.playingWord[i] = wordtest;
-  //     }
-  //     i++;
-  //   }
-  // }
 
   ngAfterViewInit() {
     this.keyboard.consumeLetters((letter) => {
@@ -67,14 +53,32 @@ export class GameComponent implements OnInit, AfterViewInit {
   keyEntered(letter) {
     console.log(letter);
     let i = 0;
+    let emptyCases = 0;
     while (i < this.room.word.length) {
-
       if (this.room.word[i] === letter) {
         this.me.playingWord[i] = letter;
       }
-      i++;
+      i += 1;
     }
+    for (let idx = 0; idx < this.room.word.length; idx = idx + 1) {
+      if (this.me.playingWord[idx] === null) {
+        emptyCases = emptyCases + 1;
+      }
+      if (this.room.word[i] !== letter) {
+        this.me.remainingTries = this.me.remainingTries - 1;
+      }
+    }
+    if (emptyCases === 0) {
+      this.winGame();
+    }
+
+    console.log(emptyCases);
     console.log(this.me.playingWord);
+  }
+
+
+  winGame() {
+    alert('You win, click "OK" for being redirected at Home !');
   }
 
   generateRoom() {
@@ -88,17 +92,14 @@ export class GameComponent implements OnInit, AfterViewInit {
     room.players[1].name = 'Player2';
     room.players[1].remainingTries = 13;
     room.players[1].score = 0;
-    console.log('Coucou');
 
     this.afs.doc<Room>('rooms/znREuYkPqXHniqCNFGOc').set(JSON.parse(JSON.stringify(room))).then(() => {
-      console.log('Coucou2');
       console.log('Room updated');
       this.afs.doc('dictionary/61mUBkjCZL7TBF2CPueq').valueChanges().subscribe((dictionary) => {
-        console.log('Coucou3');
         this.dictionary = dictionary;
         console.log(this.dictionary);
         if (this.room) {
-          this.setWord();
+          this.SetRdmWord();
         }
       });
     });
