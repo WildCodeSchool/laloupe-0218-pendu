@@ -6,7 +6,7 @@
 }
 
 .logoutbtn span:after {
-  content: '\00bb';
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -21,4 +21,20 @@
 .logoutbtn:hover span:after {
   opacity: 1;
   right: 0;
+}
+.wait {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 12em;
+  height: 12em;
+}
+p {
+  text-align: center;
+  margin-top: 16em;
+}
+.btn {
+  display: block;
+  margin: auto;
 }
