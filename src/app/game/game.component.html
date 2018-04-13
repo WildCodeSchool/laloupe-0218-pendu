@@ -3,6 +3,9 @@
         <div *ngIf="room && me">
             <div class="col-6 first">
                 <p>
+                    {{ me.name }}
+                </p>
+                <p>
                     My remaining tries : {{ me.remainingTries }}
                 </p>
                 <p>
@@ -10,6 +13,9 @@
                 </p>
             </div>
             <div class="col-6 second">
+                <p>
+                    {{ opponent.name }}
+                </p>
                 <p>
                     Opponent remaining tries : {{ opponent.remainingTries }}
                 </p>
