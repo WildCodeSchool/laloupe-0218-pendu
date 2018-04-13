@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="row all">
+        <div *ngIf="room && me">
+            <div class="col-6 first">
+                <p>
+                    {{ me.name }}
+                </p>
+                <p>
+                    My remaining tries : {{ me.remainingTries }}
+                </p>
+                <p>
+                    My Score : {{ me.score }}
+                </p>
+            </div>
+            <div class="col-6 second">
+                <p>
+                    {{ opponent.name }}
+                </p>
+                <p>
+                    Opponent remaining tries : {{ opponent.remainingTries }}
+                </p>
+                <p>
+                    Opponent Score : {{ opponent.score }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="lettre">
+        <div class="letter" *ngFor="let letter of me.playingWord">
+            {{ letter }}
+        </div>
+
+    </div>
+
+</div>
+
+<app-keyboard></app-keyboard>

@@ -1,0 +1,9 @@
+<div *ngFor="let row of rowsOfKeys" class="keyboard center-items">
+  <span *ngFor="let key of row">
+    <ng-container>
+      <button mat-fab color="accent" (click)="virtualKeySubject.next(key)" [disabled]=isKeyUsed(key)>
+        {{ key }}
+      </button>
+    </ng-container>
+  </span>
+</div>
