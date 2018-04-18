@@ -6,14 +6,19 @@
     font-size: 32px;
     text-align: center;
     border-radius: 15px;
-
 }
+
+.surrender {
+    text-align: center
+}
+
 .lettre {
     display: inline-block;
     text-align: center;
     margin-left: 33vw;
     margin-bottom: 5vw;
 }
+
 .all {
     padding: 17vw;
     margin-bottom: -12vw;
@@ -25,5 +30,8 @@
 
 .second {
     margin-left: 50vw;
-    
+}
+
+.ff {
+    margin-top: 25px;
 }

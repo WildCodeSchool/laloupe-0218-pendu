@@ -7,6 +7,7 @@ import { AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/take';
 import { Router, ActivatedRoute } from '@angular/router';
+import { NgIf } from '@angular/common';
 
 
 @Component({
