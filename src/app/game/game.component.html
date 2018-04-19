@@ -33,7 +33,7 @@
             </div>
         </div>
     </div>
-    <div class="lettre">
+    <div class="lettre" *ngIf="room && me">
         <div class="letter" *ngFor="let letter of me.playingWord">
             {{ letter }}
         </div>

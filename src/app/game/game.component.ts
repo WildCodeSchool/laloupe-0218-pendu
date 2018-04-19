@@ -123,9 +123,9 @@ export class GameComponent implements OnInit, AfterViewInit {
   }
 
   get me() {
-    if (this.room.players[0].id === this.authId) {
+    if (this.room && this.room.players[0].id === this.authId) {
       return this.room.players[0];
-    } else if (this.room.players[1].id === this.authId) {
+    } else if (this.room && this.room.players[1].id === this.authId) {
       return this.room.players[1];
     } else {
       return null;
